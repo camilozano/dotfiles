@@ -13,7 +13,7 @@ source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 alias v='nvim'
 alias c='clear'
-alias cat='ccat'
+alias cat='bat'
 
 p() {
     cd $HOME/Documents/Programming/$1
