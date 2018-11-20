@@ -35,12 +35,15 @@ Plugin 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'Javascript-Indent'
+Plugin 'zchee/deoplete-jedi'
 " JS deoplete
 Plugin 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plugin 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install -g tern' }
 Plugin 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 
 call vundle#end()
+
+
 
 " === SHORTCUTS ===
 
@@ -94,6 +97,16 @@ let g:deoplete#sources = {}
 let g:deoplete#sources['javascript.jsx'] = ['file', 'ultisnips', 'ternjs']
 let g:tern#command = ['tern']
 let g:tern#arguments = ['--persistent']
+
+"Undo History
+if !isdirectory($HOME."/.vim")
+    call mkdir($HOME."/.vim", "", 0770)
+endif
+if !isdirectory($HOME."/.vim/undo-dir")
+    call mkdir($HOME."/.vim/undo-dir", "", 0700)
+endif
+set undodir=~/.vim/undo-dir
+set undofile
 
 " Color
 set background=dark
