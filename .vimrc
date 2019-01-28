@@ -26,6 +26,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'alvan/vim-closetag'
 Plugin 'kien/ctrlp.vim'
+Plugin 'sheerun/vim-polyglot'
 Plugin 'morhetz/gruvbox'
 Plugin 'raimondi/delimitmate'
 Plugin 'scrooloose/nerdcommenter'
@@ -36,6 +37,8 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'Javascript-Indent'
 Plugin 'zchee/deoplete-jedi'
+Plugin 'mdempsky/gocode'
+Plugin 'zchee/deoplete-go', { 'do': 'make'}
 " JS deoplete
 Plugin 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plugin 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install -g tern' }
@@ -43,7 +46,7 @@ Plugin 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 
 call vundle#end()
 
-
+let g:deoplete#sources#go#gocode_binary = '/Users/camilolozano/go/bin/gocode'
 
 " === SHORTCUTS ===
 

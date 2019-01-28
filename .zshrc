@@ -15,6 +15,9 @@ alias v='nvim'
 alias c='clear'
 alias cat='bat'
 
+export GOPATH=/Users/camilolozano/go
+
+
 p() {
     cd $HOME/Documents/Programming/$1
 }
